@@ -1,0 +1,25 @@
+{
+  "name": "t3chnaztea-psn",
+  "description": "Agent skills for turning a PlayStation play-history export into taste reads, backlog verdicts, and wishlist calls.",
+  "owner": {
+    "name": "tech nasty"
+  },
+  "plugins": [
+    {
+      "name": "psn",
+      "source": "./",
+      "description": "Agent skills for a PlayStation play-history export: produce/refresh it, read your taste profile, triage your backlog, and rank your wishlist by what you'll actually finish.",
+      "category": "gaming",
+      "tags": [
+        "playstation",
+        "psn",
+        "gaming",
+        "taste-profile",
+        "backlog",
+        "wishlist",
+        "psnstats",
+        "agent-skills"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "psn",
+  "version": "1.0.0",
+  "description": "Agent skills for turning a PlayStation play-history export into decisions: producing and refreshing the export (npsso auth, flag selection, rate-limit doctrine), reading your taste profile with signal-cited recommendations, triaging your unfinished backlog into return-vs-drop verdicts, and ranking your store wishlist by what you'll actually play and finish. Built around the awesome-psnstats CLI.",
+  "author": {
+    "name": "tech nasty"
+  },
+  "homepage": "https://github.com/t3chnaztea/awesome-psn-skills",
+  "repository": "https://github.com/t3chnaztea/awesome-psn-skills",
+  "license": "MIT",
+  "keywords": [
+    "playstation",
+    "psn",
+    "gaming",
+    "taste-profile",
+    "backlog",
+    "agent-skills"
+  ]
+}
