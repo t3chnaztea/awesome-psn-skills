@@ -27,6 +27,7 @@
 
 Each is a self-contained home for one job. **Start with `psn-export`**: the
 other three all read the export it produces and never touch PSN themselves.
+`psn-export` does the chores so they don't have to.
 
 <table>
   <tr>
@@ -53,6 +54,26 @@ other three all read the export it produces and never touch PSN themselves.
 
 ---
 
+## What it looks like
+
+Point `psn-taste-profile` at your export and ask what your library says about you:
+
+<p align="center">
+  <img src="./media/example-taste-profile.png" alt="psn-taste-profile reading a taste profile: Souls games at the top of the shelf, roguelites in the current rotation, a low friction tolerance that shows up as a high mid-game abandon rate" width="820">
+</p>
+
+The other skills read the same export for different questions (both examples below run against the bundled `examples/preferences.json`):
+
+> **you:** which of my unfinished games should I actually go back to?
+>
+> **psn-backlog-triage:** Return to **Cyberpunk 2077**: 70% done, no abandon flags, it just went cold 70 days ago. Highest-value reclaim in the pile. Drop **Death Stranding** (12%, both abandon flags, 300 days stale) and, honestly, **Sekiro** too: 30% and late-abandoned, and your friction tolerance is 17.9, so you don't come back to grinds you've already put down. (Needs a `--trophies` run for the completion data.)
+
+> **you:** anything on my wishlist worth buying right now?
+>
+> **psn-wishlist-advisor:** The short, high-replay roguelite at -25% is the buy: it hits your "short-session loops" signal and a lane you already finish. The 90-hour narrative RPG is a pass even at 60% off. It walks straight into your "drawn-out mid-game" avoid-signal, and a discounted did-not-finish is still a did-not-finish.
+
+---
+
 ## Why skills, not just pasting the JSON into a chat?
 
 Fair question. `psnstats` writes `preferences.json` to be pasted straight into
@@ -67,7 +88,6 @@ semantics, and an agent with no doctrine will misread it.
 |------|:---:|:---:|
 | Sort games by a number in the file | ✅ | ✅ |
 | Explain a score from its *components* (log-playtime, 90-day recency, completion, replay) | ❌ | ✅ |
-| Know that a bare `completionist_bias: 50` means "no trophy data", not "average" | ❌ | ✅ |
 | Refuse to invent a title or score that isn't in the export | ❌ | ✅ |
 | Route back to a `--trophies` run when backlog triage needs completion | ❌ | ✅ |
 | Rank a wishlist by finish-likelihood against your avoid-signals | ❌ | ✅ |
@@ -141,7 +161,7 @@ remains the canonical reference for the CLI itself.
 
 ## Contributing
 
-Have a sharper way to read the export, or a new angle on the data? Copy
+Found a signal in the export we're not reading yet? Copy
 [`template/SKILL.md`](template/SKILL.md) and follow its authoring notes:
 original prose, generic examples (never a real npsso or a personal library),
 markdown only, and show the reader the signal behind every call. PRs welcome.
@@ -172,4 +192,4 @@ MIT; see [LICENSE](LICENSE).
 
 ---
 
-Agent skills for reading your PlayStation taste, built on awesome-psnstats.
+The backlog isn't going to triage itself. Built on awesome-psnstats.
