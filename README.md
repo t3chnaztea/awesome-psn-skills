@@ -1,4 +1,4 @@
-<!-- the library remembers -->
+<!-- awesome PSN API skills for Claude Code -->
 
 <p align="center">
   <img src="./media/hero.png" alt="awesome-psn-skills: agent skills for reading your PlayStation taste" width="840">
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <b>Your PlayStation play history, read back to you as decisions.</b>
+  <b>Claude Code agent skills for your PlayStation play history: read your taste, triage your backlog, rank your wishlist.</b>
 </p>
 
 > [`awesome-psnstats`](https://github.com/t3chnaztea/awesome-psnstats) exports your PlayStation play history and builds an LLM-ready taste profile (`preferences.json`, `library.csv`, `wishlist.json`). Its README ships a few starter prompts, and those prompts want to be a proper skills layer. This repo is that layer, packaged as [Agent Skills](https://agentskills.io): focused, model-readable guides your coding agent (Claude Code and other harnesses) loads on demand to produce the export, read your taste, triage your backlog, and rank your wishlist. The doctrine is what keeps the agent honest: rank by the real scoring formula, never invent a title, and route back to a fresh export when the data is stale.
@@ -172,4 +172,4 @@ MIT; see [LICENSE](LICENSE).
 
 ---
 
-The library remembers. Now it recommends.
+Agent skills for reading your PlayStation taste, built on awesome-psnstats.
