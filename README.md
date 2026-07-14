@@ -13,10 +13,10 @@
 </p>
 
 <p align="center">
-  <b>Claude Code agent skills for your PlayStation play history: read your taste, triage your backlog, rank your wishlist.</b>
+  <b>A game sommelier for Claude Code: reads your real PlayStation play history, then tells you what to play, what to go back to, and what to quietly stop pretending you'll finish.</b>
 </p>
 
-> [`awesome-psnstats`](https://github.com/t3chnaztea/awesome-psnstats) exports your PlayStation play history and builds an LLM-ready taste profile (`preferences.json`, `library.csv`, `wishlist.json`). Its README ships a few starter prompts, and those prompts want to be a proper skills layer. This repo is that layer, packaged as [Agent Skills](https://agentskills.io): focused, model-readable guides your coding agent (Claude Code and other harnesses) loads on demand to produce the export, read your taste, triage your backlog, and rank your wishlist. The doctrine is what keeps the agent honest: rank by the real scoring formula, never invent a title, and route back to a fresh export when the data is stale.
+> Four [Agent Skills](https://agentskills.io): focused, model-readable guides your coding agent (Claude Code and other harnesses) loads on demand to produce the export, read your taste, triage your backlog, and rank your wishlist. The doctrine is what keeps the agent honest: rank by the real scoring formula, never invent a title, and route back to a fresh export when the data is stale. The data comes from [`awesome-psnstats`](https://github.com/t3chnaztea/awesome-psnstats), which exports your PlayStation play history into an LLM-ready taste profile (`preferences.json`, `library.csv`, `wishlist.json`). Its README ships a few starter prompts, and those prompts wanted to be a proper skills layer. This repo is that layer.
 
 ```
 /plugin marketplace add t3chnaztea/awesome-psn-skills
@@ -115,6 +115,10 @@ token.** The npsso is a session cookie equivalent to your PlayStation password.
 ---
 
 ## Install
+
+You need: a PlayStation account, Python 3.10+ (the skills install
+[`psnstats`](https://github.com/t3chnaztea/awesome-psnstats) via `pipx` for
+you), and Claude Code or any harness that discovers Agent Skills.
 
 ### Claude Code plugin (recommended)
 
